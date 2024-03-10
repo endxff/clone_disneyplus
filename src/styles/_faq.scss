@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .faq {
     padding: 5.6vw;
 
@@ -17,12 +19,16 @@
             }
 
             &__question {
-                color: #fff;
+                color: variaveis.$corTextoSecundario;
                 font-size: 20px;
                 padding: 24px;
                 display: block;
                 cursor: pointer;
                 position: relative;
+
+                @media (max-width: 768px) {
+                    font-size: 15px;
+                }
 
                 &::after {
                     content: '+';
